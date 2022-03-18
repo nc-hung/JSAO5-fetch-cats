@@ -6,7 +6,7 @@ let hienthiData = function(catListDT) {
 
         //tạo thẻ div trong catList chứa thông tin xuất ra của con mèo
         let div = document.createElement('div');
-        div.classList.add('cat-box')
+        div.classList.add('item')
         catList.appendChild(div);
 
         let img = document.createElement('img');
@@ -16,8 +16,8 @@ let hienthiData = function(catListDT) {
         } else {
             img.src = catListDT[i].image.url;
             img.classList.add('cat-box')
+
         }
-        // img.style.width = '300px';
         div.appendChild(img);
 
         let nameH5 = document.createElement('h5');
@@ -26,8 +26,13 @@ let hienthiData = function(catListDT) {
 
         let origin = document.createElement('span');
         origin.innerText = 'Origin: ' + catListDT[i].origin;
-        origin.style.display = 'none'
+        origin.classList.add('showinfo');
         div.appendChild(origin);
+
+        let description = document.createElement('span');
+        description.classList.add('showinfo2');
+        description.innerText = catListDT[i].description;
+        div.appendChild(description)
 
     }
 }

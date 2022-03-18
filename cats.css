@@ -6,6 +6,14 @@
   justify-content: space-evenly;
   align-items: center;
 }
+#catList .item {
+  position: relative;
+}
+#catList .item:hover .showinfo2 {
+  display: block;
+  cursor: pointer;
+  opacity: 0.5;
+}
 #catList .cat-box {
   border-radius: 5px;
   width: 300px;
@@ -14,6 +22,27 @@
 }
 #catList .cat-box:hover {
   transform: scale(1.1);
+}
+#catList .showinfo {
+  position: absolute;
+  top: 0;
+  display: none;
+  background: #fff;
+  margin-top: 2%;
+  border-radius: 10px;
+}
+#catList .showinfo2 {
+  position: absolute;
+  top: 10%;
+  display: none;
+  background: #419ec3;
+  padding: 2%;
+  border-radius: 10px;
+}
+#catList div:hover .showinfo {
+  display: block;
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=cats.css.map */
